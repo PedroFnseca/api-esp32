@@ -17,7 +17,7 @@ async function insertSensor(data){
 
     const connection = await dabase.connect()
 
-    const sql = 'INSERT INTO tbl_sensor(valorSensor, id_sensor, dataHora) VALUES (?,?, (SELECT NOW()));'
+    const sql = 'INSERT INTO tbl_sensor(valorSensor, id_sensor, dataHora) VALUES (?, ?, (SELECT NOW()))'
 
     await conn.query('SET time_zone = "-03:00"')
     await connection.query(sql, [id_sensor, valor_sensor])
