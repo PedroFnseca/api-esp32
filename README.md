@@ -11,8 +11,7 @@
 
     {
         "idSensor": 4,      
-        "valorSensor": 80,
-        "key": "valueKey"
+        "valorSensor": 80
     }
 
 <br>
