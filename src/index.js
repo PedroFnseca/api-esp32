@@ -1,5 +1,5 @@
 import express from 'express'
-import routes from './router.js'
+import routes from './routes.js'
 
 const api = express()
 api.use(express.json())
