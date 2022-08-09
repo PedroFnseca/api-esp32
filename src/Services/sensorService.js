@@ -35,3 +35,9 @@ async function countData(){
 
     return rows
 }
+
+export default {
+    getAll,
+    insertSensor,
+    countData
+}
