@@ -20,5 +20,6 @@
 > ## Coletando dados dos sensores 🌱
 > ### URL (GET)
 
-#### 1- Todos os registros com seus valores ```.../sensor/allData```
-#### 3- Números de registros ```.../sensor/count```
+#### 1- Todos os registros com seus valores ```.../sensor/alldata```
+#### 2- Números de registros ```.../sensor/count```
+#### 3- Apagar todos os registros dos sensores ```.../sensor/deleteall```
