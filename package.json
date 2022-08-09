@@ -1,0 +1,8 @@
+{
+  "name": "api-esp32",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pedroFnseca/api-esp32.git",
+  "author": "pedrofnseca <pedropereira.pp264@gmail.com>",
+  "license": "MIT"
+}
