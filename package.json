@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/pedroFnseca/api-esp32.git",
   "author": "pedrofnseca <pedropereira.pp264@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  }
 }
