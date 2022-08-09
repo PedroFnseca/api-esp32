@@ -19,7 +19,7 @@ router.post('/insert', [
 
     try{
         await db.insertSensor({ id_sensor, valor_sensor })
-        res.status(200).json({ message: 'Dados inseridos com sucesso' })
+        res.status(200).json({ Mensagem: 'Dados inseridos com sucesso' })
     } catch(err){
         res.status(500).json({ databaseError: 'Erro ao inserir dados' })
     }
@@ -41,9 +41,9 @@ router.get('/alldata', async (req, res) => {
     const data = await db.getAll()
 
     if(data.length === 0){
-        res.status(404).json({ message: 'Não há dados cadastrados' })
+        res.status(404).json({ Mensagem: 'Não há dados cadastrados' })
     } else {
-        res.status(200).json({ data })
+        res.status(200).json({ Dados: data })
     }
 
     } catch(err){
@@ -55,7 +55,7 @@ router.get('/alldata', async (req, res) => {
 router.get('/deleteall', async (req, res) => {
     try{
         await db.deleteAll()
-        res.status(200).json({ message: 'Dados deletados com sucesso' })
+        res.status(200).json({ Mensagem: 'Dados deletados com sucesso' })
     }
     catch(err){
         res.status(500).json({ databaseError: 'Erro ao deletar dados' })
