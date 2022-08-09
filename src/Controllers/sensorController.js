@@ -20,22 +20,29 @@ router.post('/insert', [
     try{
         await db.insertSensor({ id_sensor, valor_sensor })
         res.status(200).json({ message: 'Dados inseridos com sucesso' })
-    }
-    catch(err){
+    } catch(err){
         res.status(500).json({ databaseError: 'Erro ao inserir dados' })
     }
 })
 
 // Rota para contar a quantidade de dados inseridos no banco de dados
 router.get('/count', async (req, res) => {
-    const count = await db.countData()
-    res.status(200).json({ count })
+    try{
+        const count = await db.countData()
+        res.status(200).json({ count })
+    } catch(err){
+        res.status(500).json({ databaseError: 'Erro ao contar dados' })
+    }
 })
 
 // Rota para listar todos os dados do banco de dados
 router.get('/alldata', async (req, res) => {
+    try{
     const data = await db.getAll()
     res.status(200).json({ data })
+    } catch(err){
+        res.status(500).json({ databaseError: 'Erro ao listar dados' })
+    }
 })
 
 export default router
