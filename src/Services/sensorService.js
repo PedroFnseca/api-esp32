@@ -36,8 +36,20 @@ async function countData(){
     return rows
 }
 
+// Deleta todos os dados do banco de dados na tabela tbl_sensor
+async function deleteAll(){
+    const connection = await dabase.connect()
+
+    const sql = 'DELETE FROM tbl_sensor'
+
+    await connection.query(sql)
+
+    connection.end()
+}
+
 export default {
     getAll,
     insertSensor,
-    countData
+    countData,
+    deleteAll
 }
