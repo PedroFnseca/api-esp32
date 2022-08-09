@@ -3,7 +3,7 @@
 <br>
 
 > ## Inserir dados dos sensores 🌱
-> ### URL (POST) 
+> ### Método (POST) 
 
 #### ```.../sensor/insert```
 
@@ -17,7 +17,7 @@
 <br>
 
 > ## Coletando dados dos sensores 🌱
-> ### URL (GET)
+> ### Método (GET)
 
 #### 1- Todos os registros com seus valores ```.../sensor/alldata```
 #### 2- Números de registros ```.../sensor/count```
