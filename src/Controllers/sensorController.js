@@ -51,4 +51,15 @@ router.get('/alldata', async (req, res) => {
     }
 })
 
+// Deleta todos os dados do banco de dados na tabela tbl_sensor
+router.get('/deleteall', async (req, res) => {
+    try{
+        await db.deleteAll()
+        res.status(200).json({ message: 'Dados deletados com sucesso' })
+    }
+    catch(err){
+        res.status(500).json({ databaseError: 'Erro ao deletar dados' })
+    }
+})
+
 export default router
