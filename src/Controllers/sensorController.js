@@ -29,7 +29,7 @@ router.post('/insert', [
 router.get('/count', async (req, res) => {
     try{
         const count = await db.countData()
-        res.status(200).json({ count })
+        res.status(200).json({ total: count[0].total })
     } catch(err){
         res.status(500).json({ databaseError: 'Erro ao contar dados' })
     }
@@ -39,7 +39,13 @@ router.get('/count', async (req, res) => {
 router.get('/alldata', async (req, res) => {
     try{
     const data = await db.getAll()
-    res.status(200).json({ data })
+
+    if(data.length === 0){
+        res.status(404).json({ message: 'Não há dados cadastrados' })
+    } else {
+        res.status(200).json({ data })
+    }
+
     } catch(err){
         res.status(500).json({ databaseError: 'Erro ao listar dados' })
     }
