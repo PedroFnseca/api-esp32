@@ -1,23 +1,28 @@
-#### Link para acessar api ```https://esp32-willian.herokuapp.com```
+# Nome Projeto
+### Sobre o projeto
 
 <br>
 
-> ## Inserir dados dos sensores 🌱
-> ### Método (POST) 
-
-#### ```.../sensor/insert```
-
-#### Body JSON
-
-    {
-        "idSensor": 4,      
-        "valorSensor": 80
-    }
+## O que é HTTP? 🤔
+> ### Tópico 1
+> ### Tópico 2
 
 <br>
 
-> ## Coletando dados dos sensores 🌱
-> ### Método (GET)
+| Método | Descrição |
+|--------|-----------|
+|  POST  |desc método|
+|GET     | desc método|
+|DELETE| desc método|
+
+### URL (POST) ```.../sensor/insert``` 
+```json
+{
+    "idSensor": 4,      
+    "valorSensor": 80
+}
+```
+### GET 📬
 
 #### 1- Todos os registros com seus valores ```.../sensor/alldata```
 #### 2- Números de registros ```.../sensor/count```
