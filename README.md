@@ -63,6 +63,7 @@ node src/index.js
 
 ## Está pronto! Boa utilização 😊
 
+<br>
 
 <p align = "center">
 <img src= "https://img.shields.io/badge/License-MIT-yellow.svg"/>
