@@ -49,8 +49,8 @@ node src/index.js
 ### URL (POST) ```.../sensor/insert``` 
 ```json
 {
-    "idSensor": 4,      
-    "valorSensor": 80
+    "id": 4,      
+    "valor": 80
 }
 ```
 ### GET 📬
