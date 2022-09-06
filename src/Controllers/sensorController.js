@@ -6,8 +6,8 @@ const router = express.Router()
 
 // Rota para inserir dados de sensores no banco de dados
 router.post('/insert', [
-    body('id_sensor').not().notEmpty().withMessage('id_sensor é obrigatório'),
-    body('valor_sensor').not().notEmpty().withMessage('valor_sensor é obrigatório')
+    body('id').not().notEmpty().withMessage('id é obrigatório'),
+    body('valor').not().notEmpty().withMessage('valor é obrigatório')
 ], async (req, res) => {
 
     const errors = validationResult(req)
@@ -15,10 +15,10 @@ router.post('/insert', [
         return res.status(400).json({ errors: errors.array() })
     }
 
-    const { id_sensor, valor_sensor } = req.body
+    const { id, valor } = req.body
 
     try{
-        await db.insertSensor({ id_sensor, valor_sensor })
+        await db.insertSensor( id, valor)
         res.status(200).json({ Mensagem: 'Dados inseridos com sucesso' })
     } catch(err){
         res.status(500).json({ databaseError: 'Erro ao inserir dados' })
