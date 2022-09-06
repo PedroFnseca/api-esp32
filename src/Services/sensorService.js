@@ -12,15 +12,14 @@ async function getAll(){
 }
 
 // Insere no banco de dados os valores do sensor
-async function insertSensor(data){
-    const { id_sensor, valor_sensor } = data
+async function insertSensor(id, valor){
 
     const connection = await dabase.connect()
 
-    const sql = 'INSERT INTO tbl_sensor(valorSensor, id_sensor, dataHora) VALUES (?, ?, (SELECT NOW()))'
+    const sql = 'INSERT INTO tbl_sensor(valor, id, dataHora) VALUES (?, ?, (SELECT NOW()))'
 
     await conn.query('SET time_zone = "-03:00"')
-    await connection.query(sql, [id_sensor, valor_sensor])
+    await connection.query(sql, [id, valor])
 
     connection.end()
 }
