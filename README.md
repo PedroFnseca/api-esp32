@@ -1,5 +1,9 @@
-# Nome Projeto
-### Sobre o projeto
+<p align = "center">
+<img src= "https://img.shields.io/badge/License-MIT-yellow.svg"/>
+</p>
+
+# API para testes de HTTP / HTTPS 👾
+### O projeto foi desenvolvido para ser utilizado em sala de aula, para demonstrar usos de protocolos de comunicação com o microcontrolador Esp32.
 
 <br>
 
@@ -62,9 +66,3 @@ node src/index.js
 <br>
 
 ## Está pronto! Boa utilização 😊
-
-<br>
-
-<p align = "center">
-<img src= "https://img.shields.io/badge/License-MIT-yellow.svg"/>
-</p>
